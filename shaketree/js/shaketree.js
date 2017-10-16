@@ -42,6 +42,7 @@ var last_update = 0;
 var index=0;
 var x = y = z = last_x = last_y = last_z = 0;
 var w_curTime=0;
+var shakeTime = 0;
 function init() {
     if (window.DeviceMotionEvent) {
         window.addEventListener('devicemotion', deviceMotionHandler, false);
@@ -64,8 +65,11 @@ function deviceMotionHandler(eventData) {
             if((curTime-w_curTime)>2000){   
                 w_curTime!=0 && new Coin({density:Math.round(delta)});
                 w_curTime=curTime;
-                window.removeEventListener('devicemotion', deviceMotionHandler, false);
-                result.show();
+                shakeTime++;
+                if (shakeTime>=2) {
+                    window.removeEventListener('devicemotion', deviceMotionHandler, false);
+                    result.show();
+                }
             } 
         }
         last_x = x;
