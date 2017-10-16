@@ -5,11 +5,11 @@ var result = modal.init({
     btnEvent:[
     {
         'click':function(){
-            alert(1)
+            $('.active-page').removeClass('show');
         }
     },{
         'click':function(){
-            alert(2)
+            $('.active-page').removeClass('show');
         }
     }]
 })
@@ -31,11 +31,11 @@ $('#start-btn').click(function(){
     init();
 })
 
-var oBtn=document.getElementById('btn1');
+// var oBtn=document.getElementById('btn1');
 
-oBtn.onclick=function(){
-    var coin=new Coin();    
-}
+// oBtn.onclick=function(){
+//     var coin=new Coin();    
+// }
 //摇一摇事件
 var SHAKE_THRESHOLD = 400;
 var last_update = 0;
@@ -52,7 +52,7 @@ function init() {
 function deviceMotionHandler(eventData) {
     var acceleration = eventData.accelerationIncludingGravity;
     var curTime = new Date().getTime();
-    if ((curTime - last_update) > 100) {
+    if ((curTime - last_update) > 100) { //两次摇的时间间隔
         var diffTime = curTime - last_update;
         last_update = curTime;
         x = acceleration.x;
@@ -64,12 +64,19 @@ function deviceMotionHandler(eventData) {
             if((curTime-w_curTime)>2000){   
                 w_curTime!=0 && new Coin({density:Math.round(delta)});
                 w_curTime=curTime;
+                window.removeEventListener('devicemotion', deviceMotionHandler, false);
+                result.show();
             } 
         }
         last_x = x;
         last_y = y;
         last_z = z;
-    }else{
-        
     }
 }
+//中奖名单
+var rewardList = scrollList.init({
+    wrap:'.record_list-wrap',
+    powrap:'.record_list',
+    item:'.record_item',
+    timeout:'3000'
+})
