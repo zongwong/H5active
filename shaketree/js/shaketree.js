@@ -18,8 +18,17 @@ var ruleBox = modal.init({
     closeClass:'.modal-close',
 })
 // 我的奖品
-$('.my_reward').click(function(){
-    $('.userreward').show();
+$('.my_reward').click(function() {
+    $('.nine').addClass('filter-blur')
+    $('.userreward').show(0).css({
+        top:0,
+    });
+})
+$('.slideup-btn').click(function() {
+    $('.nine').removeClass('filter-blur')
+    $('.userreward').css({
+        top:'-100%'
+    })
 })
 
 //规则
@@ -37,7 +46,7 @@ $('#start-btn').click(function(){
 //     var coin=new Coin();    
 // }
 //摇一摇事件
-var SHAKE_THRESHOLD = 400;//300
+var SHAKE_THRESHOLD = 400;
 var last_update = 0;
 var index=0;
 var x = y = z = last_x = last_y = last_z = 0;
@@ -59,9 +68,7 @@ function deviceMotionHandler(eventData) {
         x = acceleration.x;
         y = acceleration.y;
         z = acceleration.z;
-        // var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
-        var dist = Math.sqrt((x-last_x)*(x-last_x)+(y-last_y)*(y-last_y)+(z-last_y)*(z-last_y))
-        var speed = dist/diffTime*10000;
+        var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
         var delta=Math.abs(x + y + z - last_x - last_y - last_z);
         if (speed > SHAKE_THRESHOLD) { 
             if((curTime-w_curTime)>2000){   

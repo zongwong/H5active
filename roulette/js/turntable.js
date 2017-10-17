@@ -119,10 +119,10 @@
             html.push('<li class="gb-turntable-item"> <span style="' + transform + ': rotate(' + i * turnNum + 'turn)">' + opts.prizes[i] + '</span> </li>');
             if ((i + 1) === num) {
                 prizeItems.className = 'gb-turntalbe-list';
-                container.appendChild(prizeItems);
                 prizeItems.innerHTML = html.join('');
             }
         }
+        container.appendChild(prizeItems);
         canvas.style.display = 'block';
     }
 

@@ -1,8 +1,8 @@
 html,
 body {
     height: 100%;
-    /*min-width: 320px;*/
-    /*max-width: 640px;*/
+    min-width: 320px;
+    max-width: 420px;
     margin: 0 auto;
     overflow-x: hidden;
     font-size: .4rem;
@@ -13,8 +13,7 @@ a {
     text-decoration: none;
 }
 
-.page_wrap {
-}
+.page_wrap {}
 
 .page {
     width: 100%;
@@ -36,7 +35,7 @@ a {
 }
 
 .nine {
-    background: url(../imgs/bg.png) center / cover  no-repeat;
+    background: url(../imgs/bg.png) center / cover no-repeat;
     min-height: 100%;
     overflow: hidden;
     line-height: 1.5;
@@ -67,9 +66,9 @@ a {
 .belt {
     width: 3px;
     background: #FF0036;
-    height: 5.2rem;
+    height: 6rem;
     position: absolute;
-    top: -4.62rem;
+    top: -5.42rem;
 }
 
 .belt:after {
@@ -177,8 +176,7 @@ a {
     margin-top: .3rem;
 }
 
-.num_desc {
-}
+.num_desc {}
 
 .record {
     width: 11.22rem;
@@ -205,11 +203,13 @@ a {
     display: block;
     text-align: center;
 }
-.record_list-wrap{
+
+.record_list-wrap {
     height: 4.3rem;
     overflow: hidden;
     position: relative;
 }
+
 .record .record_list {
     position: absolute;
     top: 0;
@@ -249,7 +249,9 @@ a {
     color: #fe0036;
 }
 
+
 /*rule*/
+
 .modal-wrap {
     border: 3px solid #fe0036;
     background: url(../imgs/bgs.png) top left repeat;
@@ -311,16 +313,18 @@ a {
     font-size: .5rem;
     max-height: 7.6rem;
     overflow-y: auto;
-    -webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling: touch;
 }
 
 .reward_item {
     border-bottom: 1px solid #fe0036;
     padding: .62rem 0;
 }
+
 .reward_item:first-child {
     padding-top: 0px;
 }
+
 .reward_item:last-child {
     border-bottom: none;
     padding-bottom: 0;
@@ -351,7 +355,9 @@ a {
     float: right;
 }
 
+
 /*alert*/
+
 .modal-alert {
     width: 7.5rem;
     border-radius: 1.1rem;
@@ -379,8 +385,7 @@ a {
     margin-bottom: .2rem;
 }
 
-.model-btn {
-}
+.model-btn {}
 
 .alert-type {
     width: .99rem;
@@ -421,7 +426,7 @@ a {
     left: 50%;
     margin-left: -5.665rem;
     margin-top: -5.65rem;
-    background: url(../imgs/light-bg.png) center  / 100% no-repeat;
+    background: url(../imgs/light-bg.png) center / 100% no-repeat;
 }
 
 .light1 {
@@ -440,7 +445,6 @@ a {
     100% {
         transform: rotateZ(360deg);
     }
-
 }
 
 @keyframes lightt {
@@ -451,7 +455,6 @@ a {
     100% {
         transform: rotateZ(368deg);
     }
-
 }
 
 .decorate {
@@ -551,14 +554,28 @@ a {
     }
 
     100% {
-        transform: rotateZ(360deg) translate3d(0, 3%, 0)  rotateZ(-360deg);
+        transform: rotateZ(360deg) translate3d(0, 3%, 0) rotateZ(-360deg);
     }
-
 }
 
+.filter-blur {
+    filter: blur(4px);
+}
+
+
 /*我的奖品*/
+
 .userreward {
-    display: none;
+    transition: all .3s ease-in-out;
+    top: -100%;
+    background: rgba(0, 0, 0, 0);
+}
+
+.userreward-wrap {
+    height: 12.42rem;
+    padding-bottom: .9rem;
+    background: #fff;
+    position: relative;
 }
 
 .userreward-list {
@@ -567,8 +584,26 @@ a {
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    -webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling: touch;
     background: #fff;
+    box-sizing: border-box;
+}
+
+.slideup-btn {
+    position: absolute;
+    right: 0;
+    bottom: -.75rem;
+    left: 0;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 auto;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACp0lEQVRoQ92YfXUbMRDEZxEkDFoGKYOkDFoEjRnYDBIEDYO6CBIGSRnEDAKhRbB946e7dz7rY6Vb2Wn178nW/KTVancEHYeq/gDwS0S2vZaRXn8cxN+G/1/1gugCMBM/7NGdiNx7b5grgKpeAvgOYNj5ud6tiKw8IdwAgvhnAJ8KAl0hXAAqxA9sbhCLARrEu0IsAjCI3wH4COAiEVaLT6IZwCj+JgA8AfiQgOA3ptnfLZe7CcAqfhAV5r8AuEqIfAXwuQWiGkBVmWWYbZgyY+MngPVcTC+IKgCLeBFJvQHoAWEGWCp+OCpvCBOAl/geEEUAb/GVEF9F5C2XnbIAvcRPBakqS+1vCZFMrcxOzFLRkQRQVV5GFmapbHMvInctuXv+myUQUYAgns1IarjX960QRwDnED+5F9XhdABwTvGtECPAexBfAcHsxNIEe4Be4lWVSWDX0g+r6jokkew9lLAIJ8fGn1DXVLsKHk29aWMzkyj+JpeDU1uTaOqbMlcBYpUKIW/xA6sXxKgvdol7ifeCONAXS6OvjmGTirIHEdnUvuIhnA70FYu50iKhPOar/aU0d/Z9cT88ptHKhcfpxtbyv2jq+eh0cSaaQsi480zBe6chlOVdIKoBasVPygOaAe4QVQCt4mcQfNVT9goBWeeYPSIzgKryMj5mzFu6cGPYZF5pNkhuHpEJwLu19HQmigDe4ifh5HISZ23qPU4i19QXLcScC2d9HJdCpJr6k4ifhRNd6usEOG0VVrJH9kqsqT+p+KngFmeitqnfiMiDNTxa5tVC/KtN/ejWdW3qW06gwpnYQ7Cpp4V4UhfOCmYKp8Kkph7WKtAyr6gvlLsxS+/s4ifhFIuSvb7pJR6MJDbNtyLCvPxuxizUx811a+pPQRogMHX6/gLwmeqEkFiyEAAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ff0036;
+    border-radius: .75rem;
+    background-size: .8rem .8rem;
 }
 
 .userreward-item {
@@ -577,15 +612,12 @@ a {
 }
 
 .userreward-item:last-child {
-    border-bottom: 1px solid #d9d9d9;
     padding: .7rem .6rem;
 }
 
-.userreward-item .userreward-title {
-}
+.userreward-item .userreward-title {}
 
-.userreward-item .userreward-info {
-}
+.userreward-item .userreward-info {}
 
 .breath {
     box-shadow: 0 0 3px 5px white;
@@ -601,7 +633,6 @@ a {
     to {
         box-shadow: 0 0 3px 2px white;
     }
-
 }
 
 @keyframes scrap {
@@ -615,7 +646,8 @@ a {
         transform: translateY(.1rem)
     }
 }
-.scrap{
+
+.scrap {
     animation-name: scrap;
     animation-delay: 1s;
     animation-duration: 2s;
@@ -623,12 +655,14 @@ a {
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
-.showModal{
+
+.showModal {
     animation: showModal .5s ease-in-out
 }
+
 @keyframes showModal {
     from {
-        -webkit-transform: translate(-50%, -50%) scale(.1);
+        -webkit-transform: translate(-50%, -50%) scale(.8);
         transform: translate(-50%, -50%) scale(.1)
     }
 
@@ -637,11 +671,10 @@ a {
         transform: translate(-50%, -50%) scale(1)
     }
 }
-
-
 .title{animation:bounceInLeft .8s ease-in-out 0s 1 normal both}
 .rule{animation:bounceInDown 1s ease-in .8s 1 normal both}
 .gb-turntable{animation:rotateIn 1s ease-in-out 1.6s 1 normal both}
+.lottery{animation:bounceInRight 1s step-end 1.6s 1 normal both}
 @keyframes bounceInLeft {
   from, 60%, 75%, 90%, to {
     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -709,3 +742,31 @@ a {
     opacity: 1;
   }
 }
+@keyframes bounceInRight {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+  

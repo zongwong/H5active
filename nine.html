@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script src="./lib/js/rem.js"></script>
-    <title>Document</title>
-    <link rel="stylesheet" href="./lib/css/pure-min.css">
+    <title>幸运九宫格</title>
+  <!--   <link rel="stylesheet" href="./lib/css/pure-min.css"> -->
     <link rel="stylesheet" href="./nine/css/nine.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
             <div class="belt belt_right"></div>
             <div class="pb-head time">活动时间:2017/11/01-2017/11/11</div>
         </div>
-        <div class="count">(当前您还有<span>1</span>次机会)<div class="gift breath"></div></div>
+        <div class="count">(当前您还有<span id="chanceTime">1</span>次机会)<div class="gift breath"></div></div>
         <div class="lottery" id="lottery">
             <div class="gird_box">
                 <div class="gird_item lottery-unit lottery-unit-0 active"></div>
@@ -113,33 +113,37 @@
     </div>
     <!-- 我的奖品 -->
     <div class="mask userreward">
-        <ul class="userreward-list">
-            <li class="reward_item userreward-item">
-                <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
-                <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
-            </li>
-            <li class="reward_item userreward-item">
-                <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
-                <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
-            </li>
-            <li class="reward_item userreward-item">
-                <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
-                <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
-            </li>
-            <li class="reward_item userreward-item">
-                <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
-                <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
-            </li>            <li class="reward_item userreward-item">
-                <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
-                <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
-            </li>
-            <li class="reward_item userreward-item">
-                <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
-                <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
-            </li>
-        </ul>
+        <div class="userreward-wrap">
+            <ul class="userreward-list">
+                <li class="reward_item userreward-item">
+                    <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
+                    <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
+                </li>
+                <li class="reward_item userreward-item">
+                    <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
+                    <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
+                </li>
+                <li class="reward_item userreward-item">
+                    <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
+                    <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
+                </li>
+                <li class="reward_item userreward-item">
+                    <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
+                    <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
+                </li>            <li class="reward_item userreward-item">
+                    <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
+                    <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
+                </li>
+                <li class="reward_item userreward-item">
+                    <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
+                    <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
+                </li>
+            </ul>
+            <i class="slideup-btn"></i>
+        </div>
     </div>
     <script src="./lib/js/jquery.min.js"></script>
+    <script src="./lib/js/jweixin-1.2.0.js"></script>
     <script src="./lib/js/common.js"></script>
     <script src="./nine/js/nine.js"></script>
 </body>

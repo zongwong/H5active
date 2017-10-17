@@ -19,9 +19,17 @@ window.onload = function() {
     })
     // 我的奖品
     $('.my_reward').click(function() {
-        $('.userreward').show();
+        $('.nine').addClass('filter-blur')
+        $('.userreward').show(0).css({
+            top:0,
+        });
     })
-
+    $('.slideup-btn').click(function() {
+        $('.nine').removeClass('filter-blur')
+        $('.userreward').css({
+            top:'-100%'
+        })
+    })
     //规则
     $('.gift ').click(function() {
         ruleBox.show();

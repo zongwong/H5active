@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script src="./lib/js/rem.js"></script>
-    <title>Document</title>
+    <title>摇钱树</title>
     <link rel="stylesheet" href="./lib/css/pure-min.css">
     <link rel="stylesheet" href="./shaketree/css/shaketree.css">
 </head>
+
 <body>
-    <input type="button" value="撒金币" id="btn1" style="position: absolute;top: 0;left: 0" />
     <div class="page_wrap nine shaketree">
         <header class="title">
         </header>
-         <div class="shaketree-time">活动时间:2017/11/01-2017/11/11</div>
+        <div class="shaketree-time">活动时间:2017/11/01-2017/11/11</div>
         <div class="count">当前您还有<span>1</span>次机会</div>
         <div class="shakelottery">
             <div class="start-btn shake" id="start-btn"></div>
@@ -40,7 +41,6 @@
             </div>
         </div>
     </div>
-
     <div class="decorate wave d4"></div>
     <div class="decorate wave d5"></div>
     <div class="decorate wave d6"></div>
@@ -50,7 +50,11 @@
     <div class="mask" id="rule">
         <div class="modal-wrap modal-rule">
             <div class="modal-close">
-                <svg class="close-x" viewBox="0 0 14 14"><title></title><g><path d="M8.486 7l5.208-5.207c.408-.408.405-1.072-.006-1.483-.413-.413-1.074-.413-1.482-.005L7 5.515 1.793.304C1.385-.103.72-.1.31.31-.103.724-.103 1.385.305 1.793L5.515 7l-5.21 5.207c-.407.408-.404 1.072.007 1.483.413.413 1.074.413 1.482.005L7 8.485l5.207 5.21c.408.407 1.072.404 1.483-.007.413-.413.413-1.074.005-1.482L8.485 7z"></path></g>
+                <svg class="close-x" viewBox="0 0 14 14">
+                    <title></title>
+                    <g>
+                        <path d="M8.486 7l5.208-5.207c.408-.408.405-1.072-.006-1.483-.413-.413-1.074-.413-1.482-.005L7 5.515 1.793.304C1.385-.103.72-.1.31.31-.103.724-.103 1.385.305 1.793L5.515 7l-5.21 5.207c-.407.408-.404 1.072.007 1.483.413.413 1.074.413 1.482.005L7 8.485l5.207 5.21c.408.407 1.072.404 1.483-.007.413-.413.413-1.074.005-1.482L8.485 7z"></path>
+                    </g>
                 </svg>
             </div>
             <div class="modal-content rule-content">
@@ -84,13 +88,17 @@
     <div class="mask" id="alert">
         <div class="modal-wrap modal-alert">
             <div class="modal-close close-alert">
-                <svg class="close-x" viewBox="0 0 14 14"><title></title><g><path d="M8.486 7l5.208-5.207c.408-.408.405-1.072-.006-1.483-.413-.413-1.074-.413-1.482-.005L7 5.515 1.793.304C1.385-.103.72-.1.31.31-.103.724-.103 1.385.305 1.793L5.515 7l-5.21 5.207c-.407.408-.404 1.072.007 1.483.413.413 1.074.413 1.482.005L7 8.485l5.207 5.21c.408.407 1.072.404 1.483-.007.413-.413.413-1.074.005-1.482L8.485 7z"></path></g>
+                <svg class="close-x" viewBox="0 0 14 14">
+                    <title></title>
+                    <g>
+                        <path d="M8.486 7l5.208-5.207c.408-.408.405-1.072-.006-1.483-.413-.413-1.074-.413-1.482-.005L7 5.515 1.793.304C1.385-.103.72-.1.31.31-.103.724-.103 1.385.305 1.793L5.515 7l-5.21 5.207c-.407.408-.404 1.072.007 1.483.413.413 1.074.413 1.482.005L7 8.485l5.207 5.21c.408.407 1.072.404 1.483-.007.413-.413.413-1.074.005-1.482L8.485 7z"></path>
+                    </g>
                 </svg>
             </div>
             <div class="modal-content alert-content">
-               <div class="alert-type alert-success"></div>
-               <p class="congratulation">恭喜你获得一等奖</p>
-               <p class="reward_name">[XXXXXXXX一台]</p>
+                <div class="alert-type alert-success"></div>
+                <p class="congratulation">恭喜你获得一等奖</p>
+                <p class="reward_name">[XXXXXXXX一台]</p>
             </div>
             <div class="modal-btn btn-alert">
                 <a href="javascript:">再来一次</a><a href="javascript:">查看奖品</a>
@@ -101,16 +109,19 @@
     </div>
     <!-- 我的奖品 -->
     <div class="page userreward">
-        <ul class="userreward-list">
-            <li class="reward_item userreward-item">
-                <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
-                <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
-            </li>
-            <li class="reward_item userreward-item">
-                <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
-                <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
-            </li>
-        </ul>
+        <div class="userreward-wrap"> 
+            <ul class="userreward-list">
+                <li class="reward_item userreward-item">
+                    <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
+                    <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
+                </li>
+                <li class="reward_item userreward-item">
+                    <div class="reward_item-title"><span>一等奖</span><span>价值$7999</span></div>
+                    <div class="reward_item-info"><span>iphone 深灰色</span><span>2017/11/11 20:28:20</span></div>
+                </li>
+            </ul>
+            <i class="slideup-btn"></i>
+        </div>
     </div>
     <!-- 摇树页面 -->
     <div class="page active-page">
@@ -124,4 +135,5 @@
     <script src="./shaketree/js/coin.js"></script>
     <script src="./shaketree/js/shaketree.js"></script>
 </body>
+
 </html>
