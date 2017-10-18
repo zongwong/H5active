@@ -35,10 +35,10 @@ a {
 }
 
 .nine {
-    background: url(../imgs/bg.png) center / cover no-repeat;
+    background: url(../imgs/bg.png) center / contain no-repeat;
     min-height: 100%;
-    overflow: hidden;
     line-height: 1.5;
+    overflow: hidden;
 }
 
 .title {

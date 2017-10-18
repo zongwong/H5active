@@ -142,6 +142,10 @@
      */
     function events() {
         bind(btn, 'click', function() {
+
+            if (hasClass(btn,'disabled')) {
+                return false;
+            }
             addClass(btn, 'disabled');
             fnGetPrize(function(data) {
                 optsPrize = {

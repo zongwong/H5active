@@ -90,8 +90,8 @@ $(".game_start").click(function() {
     game.getResult('https://www.easy-mock.com/mock/59e5b90705db1179c65de6fc/game/reward',function(res){
         if (res.code == 200) {
             lottery.prize = res.data.index;
-            $('.congratulation').text('恭喜你获得'+res.data.reward);
-            $('.reward_name').text(res.data.text);
+            $('.alert-content .congratulation').text('恭喜你获得'+res.data.reward);
+            $('.alert-content .reward_name').text(res.data.text);
         }
 
 

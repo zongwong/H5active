@@ -40,11 +40,7 @@ $('#start-btn').click(function(){
     init();
 })
 
-// var oBtn=document.getElementById('btn1');
 
-// oBtn.onclick=function(){
-//     var coin=new Coin();    
-// }
 //摇一摇事件
 var SHAKE_THRESHOLD = 400;
 var last_update = 0;
@@ -76,8 +72,9 @@ function deviceMotionHandler(eventData) {
                 w_curTime=curTime;
                 shakeTime++;
                 if (shakeTime>=2) {
-                    window.removeEventListener('devicemotion', deviceMotionHandler, false);
                     result.show();
+                    window.removeEventListener('devicemotion', deviceMotionHandler, false);
+                    shakeTime=0;
                 }
             } 
         }
